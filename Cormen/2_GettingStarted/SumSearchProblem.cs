@@ -8,10 +8,11 @@ namespace Cormen._2_GettingStarted
         {
             MergeSort.Sort(s); // lg(n)
 
-            for (int i = 0; i < s.Length; i++)
+            for (int i = 0; i < s.Length; i++) // n
             {
-                var val = x - s[i];
-                if(BinarySearch.Search(s, val) != -1)
+                var val = x - s[i];         // n
+                var valIndex = BinarySearch.Search(s, val); // n * lg(n)
+                if (valIndex != -1 && valIndex != i)
                     return true;
             }
 
