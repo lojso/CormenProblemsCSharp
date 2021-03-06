@@ -2,7 +2,7 @@
 {
     public static class BinarySearch
     {
-        public static int Sort(int[] array, int value)
+        public static int Search(int[] array, int value)
         {
             var low = 0;
             var high = array.Length - 1;
@@ -26,7 +26,7 @@
             return -1;
         }
 
-        public static int RSort(int[] array, int value)
+        public static int RSearch(int[] array, int value)
         {
             return RSortImpl(array, value, 0, array.Length - 1);
         }
