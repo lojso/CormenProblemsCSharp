@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Cormen._2_GettingStarted
+﻿namespace Cormen._2_GettingStarted
 {
     public static class SelectionSort
     {
