@@ -33,7 +33,7 @@
 
         private static int RSortImpl(int[] array, int value, int low, int high)
         {
-            if (low >= high)
+            if (low > high)
                 return -1;
             
             var mid = (low + high) / 2;
