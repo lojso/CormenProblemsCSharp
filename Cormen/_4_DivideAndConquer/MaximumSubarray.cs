@@ -6,8 +6,7 @@
         {
             if (low >= high)
                 return (low, high, array[low]);
-
-
+            
             var mid = (low + high) / 2;
             var (leftLow, leftHigh, leftSum) = FindMaximumSubarray(array, low, mid);
             var (rightLow, rightHigh, rightSum) = FindMaximumSubarray(array, mid+1, high);

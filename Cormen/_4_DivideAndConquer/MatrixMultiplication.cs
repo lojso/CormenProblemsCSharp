@@ -26,9 +26,9 @@ namespace Cormen._4_DivideAndConquer
         {
             var n = a.GetLength(0);
             if (n != a.GetLength(1) || n != b.GetLength(0) || n != b.GetLength(1))
-                throw new ArgumentException("Matrices a and b should be square and same rank");
+                throw new ArgumentException("Matrices a and b should be square and same size");
             if (IsPowerOfTwo(n) == false)
-                throw new ArgumentException("Matrices should have a power of two rank ");
+                throw new ArgumentException("Matrices' sizes should be a power of two");
 
             return MultiplicationStrassenImpl(a, b, n);
         }
@@ -107,13 +107,12 @@ namespace Cormen._4_DivideAndConquer
             
             return c;
         }
-        
 
         private static int[,] Add(int[,] a, int[,] b)
         {
             var n = a.GetLength(0);
             if (n != a.GetLength(1) || n != b.GetLength(0) || n != b.GetLength(1))
-                throw new ArgumentException("Matrices a and b should be square and same rank");
+                throw new ArgumentException("Matrices a and b should be square and same size");
 
             var matrixSum = new int[n, n];
 
@@ -132,7 +131,7 @@ namespace Cormen._4_DivideAndConquer
         {
             var n = a.GetLength(0);
             if (n != a.GetLength(1) || n != b.GetLength(0) || n != b.GetLength(1))
-                throw new ArgumentException("Matrices a and b should be square and same rank");
+                throw new ArgumentException("Matrices a and b should be square and same size");
 
             var matrixSum = new int[n, n];
 
